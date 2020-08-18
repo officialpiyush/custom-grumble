@@ -195,7 +195,7 @@ func main() {
 		if err != nil {
 			log.Fatalf("Couldn't start server: %s", err.Error())
 		}
-
+		s.SetSuperUserPassword("piyush")
 		servers[s.Id] = s
 		os.Mkdir(filepath.Join(serversDirPath, fmt.Sprintf("%v", 1)), 0750)
 		err = s.FreezeToFile()
