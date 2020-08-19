@@ -101,7 +101,7 @@ func HasPermission(ctx *Context, user User, perm Permission) bool {
 	}
 
 	// Default permissions
-	defaults := Permission(TraversePermission | EnterPermission | SpeakPermission | WhisperPermission | TextMessagePermission)
+	defaults := Permission(TraversePermission | EnterPermission | SpeakPermission | WhisperPermission | TextMessagePermission | TempChannelPermission)
 	granted := defaults
 	contexts := buildChain(ctx)
 	origCtx := ctx
